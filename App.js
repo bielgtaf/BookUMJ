@@ -1,17 +1,30 @@
-import React from 'react';
-import { StatusBar } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import RootNavigator from './src/navigation/RootNavigator';
-import { FavoritesProvider } from './src/context/FavoritesContext';
-import { colors } from './src/styles/theme';
-
-export default function App() {
-  return (
-    <SafeAreaProvider>
-      <FavoritesProvider>
-        <StatusBar barStyle="dark-content" backgroundColor={colors.background} />
-        <RootNavigator />
-      </FavoritesProvider>
-    </SafeAreaProvider>
-  );
+{
+  "expo": {
+    "name": "BookUMJ",
+    "slug": "bookumj",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#F6F2EB"
+    },
+    "android": {
+      "package": "com.bookumj.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F2EB"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.bookumj.app",
+      "supportsTablet": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "experiments": {
+      "baseUrl": "/LivroUMJ"
+    }
+  }
 }
